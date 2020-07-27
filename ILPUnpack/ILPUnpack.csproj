@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net35;net45</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <OutputPath>..\$(Configuration)\bin</OutputPath>
+
+    <Version>1.1.0.0</Version>
+    <InformationalVersion>v1.1.0</InformationalVersion>
+    <Authors>ElektroKill</Authors>
+    <Copyright>Copyright (C) ElektroKill 2023</Copyright>
+    <Product>ILP Unpack</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\ansi.flf" />
+    <EmbeddedResource Include="Resources\ansi.flf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Costura.Fody" Version="1.6.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="dnlib" Version="3.6.0" />
+    <PackageReference Include="Lib.Harmony" Version="2.2.2" />
+  </ItemGroup>
+
+</Project>
